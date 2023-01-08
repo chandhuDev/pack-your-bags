@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 
+.img-btn {
+    @apply h-80 object-cover w-4/5 skew-y-6  cursor-pointer drop-shadow-xl
+    hover:-translate-y-28 duration-150;
+}
