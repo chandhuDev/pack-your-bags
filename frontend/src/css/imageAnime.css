@@ -1,0 +1,72 @@
+.anime{
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    transition:all 1s ease-in-out;
+    animation: morph 8s ease-in-out infinite;
+}
+
+.special-class{
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.wrapper{
+box-sizing: content-box;
+height: 40px;
+padding: 50px 20px;
+}
+
+
+.span-class{
+    text-transform: none;
+    display: block;
+}
+
+
+.words{
+    overflow: hidden;
+}
+
+.roll{
+    display: block;
+    color: #0e6ffc;
+    height: 100%;
+    animation: roll-animate 3s infinite linear;
+    text-transform: uppercase;
+}
+
+
+@keyframes roll-animate {
+    0%{
+        transform: translateY(20%);
+    }
+    25%{
+        transform: translateY(-20%);
+    }
+    50%{
+        transform: translateY(-60%);
+    }
+    75%{
+        transform: translateY(-90%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+
+}
+
+
+
+@keyframes morph{
+    0% {
+         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; 
+    }
+    
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; 
+    }
+}
