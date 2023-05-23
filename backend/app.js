@@ -7,7 +7,7 @@ app.use(cors())
 
 app.use(express.json());
 app.post("/create-payment-intent",createPaymentIntent );
-app.listen(3010, () => console.log("Node server listening on port 3010!"));
+app.listen(process.env.PORT|6000, () => console.log("Node server listening on port 3010!"));
 
 
 
