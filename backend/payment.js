@@ -34,7 +34,7 @@ async function createPaymentIntent(req, res) {
   } catch (e) {
     res.send({
           error:{
-             message:error.message
+             message:e.message
           }
       })
     }
