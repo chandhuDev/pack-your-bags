@@ -15,7 +15,7 @@ useEffect(() => {
 }, [images]);
   
 return (
-        <img src={images[currentImageIndex].imageUrl} alt='image' className='w-full h-full object-cover' />
+      <img src={images[currentImageIndex].imageUrl} alt='image' className='w-full h-full object-cover rounded-tr-lg rounded-tb-lg' />
 )}
 
 export default ImageCorousel

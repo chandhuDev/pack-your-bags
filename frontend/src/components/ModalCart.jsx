@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {ImCancelCircle} from 'react-icons/im'
 import { Navigate } from '../Utils/Images';
 
-
+const payment_url = process.env.REACT_APP_PAYMENT_URL;
 
 const ModalCart = ({closeModal,productId,totalSeats}) => {
 const [value, setValue] = useState('');
@@ -15,11 +15,10 @@ function handlePayment(){
   navigate('/sign-in')
  }else{
   if(totalSeats+Number(value)>40){
-    
-   window.alert("please select less seats as we are making this trip to only 40 people")
+    window.alert("please select less seats as we are making this trip to only 40 people")
   }
   else{
-    fetch("http://localhost:3010/create-payment-intent", {
+    fetch(`${payment_url}/create-payment-intent`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({  
@@ -29,6 +28,7 @@ function handlePayment(){
         } 
       }),
       }).then((res) =>res.json()).then((res) => {
+        console.log(res)
        if(res.url){
         window.location.href=res.url
        }

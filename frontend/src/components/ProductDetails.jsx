@@ -2,7 +2,7 @@ import React,{useState } from 'react'
 import { useLocation} from 'react-router-dom';
 import {BsChevronCompactLeft,BsChevronCompactRight} from 'react-icons/bs'
 import {ModalCart} from './index';
-import { AppContext } from '../Utils/Images'
+
 
 const ProductDetails = () => {
   const [index,setIndex]=useState(0)
@@ -44,7 +44,7 @@ return (
              <h4 className=' font-serif text-center text-blue-900 py-6'>Source : {productData.source}</h4>
              <h4 className=' font-serif text-center text-blue-900 py-6'>Destination : {productData.Destination}</h4>
           </div>
-          <div className='flex flex-row  mx-4   items-center'>
+          <div className='flex flex-row mx-4 items-center'>
             <div className='flex-1'>
           <label className="block font-medium text-gray-700 my-5 span" htmlFor="date">
           Start Date : 
@@ -69,7 +69,7 @@ return (
               value={productData.endDate}
              name="date"
              readOnly
-            className="bg-white cursor-pointer focus:outline-none focus:shadow-outline-blue border border-gray-300 rounded-md py-2 px-4 block w-full appearance-none leading-5"
+            className="bg-white cursor-pointer focus:outline-none span focus:shadow-outline-blue border border-gray-300 rounded-md py-2 px-4 block w-full appearance-none leading-5"
            />
            </div>
            </div>

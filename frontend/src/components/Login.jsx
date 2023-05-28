@@ -1,9 +1,13 @@
 import React,{useState} from 'react'
 import InputFormat from '../Utils/InputFormat'
 import logo from '../assests/logo.jpg'
+import axios from "axios";
 import {Link} from 'react-router-dom'
 import { signInUser } from '../lib'
 import { Navigate } from '../Utils/Images'
+
+
+const server_url = process.env.REACT_APP_STRAPI_URL;
 
 const Login = () => {
    const [email,setEmail]=useState('')
@@ -13,9 +17,21 @@ const Login = () => {
 
    async function handleSubmit(e){
     e.preventDefault()
-    signInUser(email,password)
-    navigate("/product")
-   }
+    //signInUser(email,password)
+    axios
+    .post(`${server_url}/api/auth/local`, {
+      identifier: email,
+      password: password,
+    })
+    .then((response) => {
+      localStorage.setItem("user", response.data.user)
+      localStorage.setItem("JWT", response.data.jwt)
+      navigate('/product')
+     })
+    .catch((error) => {
+      window.alert("An error occurred:",error);
+    });
+  }
 
 
   return (

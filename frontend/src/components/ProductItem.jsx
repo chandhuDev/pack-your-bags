@@ -25,7 +25,7 @@ return (
         return (
        <div className='w-full h-auto mx-auto md:p-10 p-3 relative' key={product.id} >
             <div className='w-full h-[220px] rounded-md  cursor-pointer' onClick={()=>navigateToDetails(product)}>
-              <div  className='w-full h-[220px] rounded-md flex flex-row  border-2 cursor-pointer shadow-lg transition ease-linear delay-50    duration-300 hover:scale-110 hover:-translate-x-2'>
+              <div  className='w-full h-[220px] rounded-md flex flex-row  border-2 cursor-pointer shadow-lg transition ease-linear delay-50    duration-300 hover:scale-105'>
               <div className='md:w-2/3 w-3/5 h-full flex flex-col grow-0 '>
                 <div className='w-full h-2/6 flex flex-row justify-evenly md:text-lg text-base  items-center'>
                   <p className='font-semibold'>Journey Starts at:<span className=' md:text-3xl text-base uppercase md:ml-3 ml-1 items-center font-mono font-normal'>{product.source}</span></p> 

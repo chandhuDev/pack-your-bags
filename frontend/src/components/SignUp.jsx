@@ -4,6 +4,9 @@ import logo from '../assests/logo.png'
 import {Link} from 'react-router-dom'
 import { signUpUser } from '../lib';
 import { Navigate } from '../Utils/Images';
+
+const server_url = process.env.REACT_APP_STRAPI_URL;
+
 const SignUp = () => {
    const [email,setEmail]=useState('')
    const [password,setPassword]=useState('')
@@ -12,8 +15,26 @@ const SignUp = () => {
 
    function handleSubmit(e){
     e.preventDefault()
-    signUpUser(firstName,email,password) 
-    navigate("/product")
+    //signUpUser(firstName,email,password)
+    axios
+    .post(
+      `${server_url}/api/auth/local/register`,
+      {
+        username: firstName,
+        email: email,
+        password: password,
+      }
+    )
+    .then((response) => {
+      // Handle success.
+      localStorage.setItem("user", response.data.user);
+      localStorage.setItem("JWT", response.data.jwt);
+      navigate("/product")
+    })
+    .catch((error) => {
+      // Handle error.
+      window.alert("An error occurred:", error.response);
+    }); 
   }
 
 
