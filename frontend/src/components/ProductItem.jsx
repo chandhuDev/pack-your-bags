@@ -41,7 +41,7 @@ return (
                    </div>
                 </div>
               </div>
-              <div className='h-full w-1/3 grow rounded-tr-md rounded-tb-md' >
+              <div className='h-full w-1/3 grow rounded-tr-md rounded-br-md' >
                   <ImageCorousel images={product.imageArray}/>
               </div>
             </div>

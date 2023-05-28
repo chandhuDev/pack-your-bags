@@ -23,8 +23,6 @@ function App() {
     },[])
    
 
-console.log(product)
-
     return (
         <AppContext.Provider value={{product}}>
             <div className="h-full w-full">

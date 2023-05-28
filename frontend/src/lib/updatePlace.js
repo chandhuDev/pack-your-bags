@@ -1,8 +1,7 @@
-
+const server_url = process.env.REACT_APP_STRAPI_URL;
 export default async function updatePlace(id, seats, addSeats) {
   const JWT = localStorage.getItem("JWT");
   const formData = new FormData();
-  console.log(JWT)
   formData.append(
     "data",
     JSON.stringify({ seat: Number(seats) + Number(addSeats) })

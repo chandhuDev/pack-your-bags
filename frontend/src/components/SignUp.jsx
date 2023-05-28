@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import InputFormat from '../Utils/InputFormat'
 import logo from '../assests/logo.png'
 import {Link} from 'react-router-dom'
+import axios from "axios";
 import { signUpUser } from '../lib';
 import { Navigate } from '../Utils/Images';
 

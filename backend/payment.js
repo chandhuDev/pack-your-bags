@@ -24,8 +24,8 @@ async function createPaymentIntent(req, res) {
         },
       ],
       mode: "payment",
-      success_url: `${process.FRONTEND_URL}/successPage/${id}?seats=${seats}&available=${seatsAvailable}`,
-      cancel_url: `${process.FRONTEND_URL}/cancel`,
+      success_url: `${process.env.FRONTEND_URL}/successPage/${id}?seats=${seats}&available=${seatsAvailable}`,
+      cancel_url: `${process.env.FRONTEND_URL}/cancel`,
     });
 
     res.send({
