@@ -44,32 +44,31 @@ return (
              <h4 className=' font-serif text-center text-blue-900 py-6'>Source : {productData.source}</h4>
              <h4 className=' font-serif text-center text-blue-900 py-6'>Destination : {productData.Destination}</h4>
           </div>
-          <div className='flex flex-row mx-4 items-center'>
-            <div className='flex-1'>
+          <div className='flex flex-row justify-around md:mx-4 mx-2 items-center'>
+            <div className='md:w-full w-2/4'>
           <label className="block font-medium text-gray-700 my-5 span" htmlFor="date">
           Start Date : 
          </label>
           <input
-            type="date"
-              id="date"
+             type="date"
+             id="date"
              name="date"
              value={productData.startDate}
-             
              readOnly
-            className="bg-white cursor-pointer focus:outline-none span focus:shadow-outline-blue border border-gray-300 rounded-md py-2 px-4 block w-full appearance-none leading-5"
+             className="bg-white cursor-pointer focus:outline-none span focus:shadow-outline-blue border border-gray-300 rounded-md md:py-2 py-1 md:px-4 px-1 w-full block appearance-none leading-5"
            />
            </div>
-           <div className='flex-1'>
-          <label className="block font-medium text-gray-700 my-5" htmlFor="date">
-          End Date:
-         </label>
-          <input
-            type="date"
-              id="date"
-              value={productData.endDate}
+          <div className='md:w-full w-2/4'>
+           <label className="block font-medium text-gray-700 my-5" htmlFor="date">
+            End Date:
+           </label>
+           <input
+             type="date"
+             id="date"
+             value={productData.endDate}
              name="date"
              readOnly
-            className="bg-white cursor-pointer focus:outline-none span focus:shadow-outline-blue border border-gray-300 rounded-md py-2 px-4 block w-full appearance-none leading-5"
+             className="bg-white cursor-pointer focus:outline-none span focus:shadow-outline-blue border border-gray-300 rounded-md md:py-2 py-1 md:px-4 px-1 w-full appearance-none leading-5"
            />
            </div>
            </div>
