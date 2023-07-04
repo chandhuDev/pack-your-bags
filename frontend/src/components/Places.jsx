@@ -19,8 +19,8 @@ return (
                   return (
                   <motion.div className='min-w-fit min-h-fit p-6 overflow-hidden group' key={image}>
                     <motion.div className='relative transition shadow-xl ease-in hover:-translate-y-1 hover:scale-105 group duration-300 cursor-pointer'>
-                       <img src={image.url} alt={image.name} className='md:w-[240px] md:h-[240px] w-[200px] h-[200px] rounded-md  pointer-events-none  '/>
-                       <motion.div className="absolute duration-300  bg-black/60 text-white text-center text-xl font-semibold w-full h-1/3 group-hover:-translate-y-20 rounded-br-md rounded-bl-md group-hover:inline-block hidden">
+                       <img src={image.url} alt={image.name} className='md:w-[240px] md:h-[240px] w-[180px] h-[200px] rounded-md  pointer-events-none  '/>
+                       <motion.div className="absolute duration-300 bg-black/60 text-white text-center text-xl font-semibold w-full md:h-1/4 h-[28%] group-hover:-translate-y-14 rounded-br-md rounded-bl-md group-hover:inline-block hidden">
                              {image.name}
                       </motion.div>
                     </motion.div>
