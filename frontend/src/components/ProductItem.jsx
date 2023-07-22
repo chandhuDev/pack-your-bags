@@ -49,7 +49,7 @@ return (
                       </div> :  
                       <div className='font-serif w-full'>
                         <p className='w-full text-center'>From - To:</p>
-                        <p className='flex flex-row justify-around font-semibold'><span>{product.source}</span><span>{product.Destination}</span></p>
+                        <p className='flex flex-row justify-around md:font-semibold text-xs md:text-base'><span>{product.source}</span><span>{product.Destination}</span></p>
                       </div>
                   }
                 </div>
@@ -62,7 +62,7 @@ return (
                     </div> :  
                     <div className='font-serif w-full mt-2'>
                       <p className='text-lg font-bold w-full text-center'>Date of Journey:</p>
-                      <p className='flex semi-bold flex-row justify-around gap-2'><span>{product.startDate}</span><span>{product.endDate}</span></p>
+                      <p className='flex semi-bold flex-row justify-around gap-2 text-xs md:text-base'><span>{product.startDate}</span><span>{product.endDate}</span></p>
                     </div>
                     }
                  </div>

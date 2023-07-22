@@ -82,13 +82,13 @@ return (
           </div>
           <div className='w-full h-max md:p-5 p-2  bg-white'>
             <h5 className='md:text-3xl text-xl text-center uppercase font-mono font-semibold'>Places</h5>
-            <div className='md:p-6 my-5 p-4  relative cursor-pointer '>
+            <div className='md:p-6 my-5 p-4  relative cursor-pointer'>
             <div className=' rounded-xl group relative overflow-hidden duration-500' >
                    <div
                    style={{backgroundImage:`url(${productData.imageArray[index].imageUrl})`}} 
                    className='w-full h-128 rounded-2xl  bg-cover bg-center '>
                    </div>
-                   <div className='md:px-4 md:py-2 px-2 py-1 md:my-5 my-2  md:-bottom-56 bottom-0 absolute group-hover:-translate-y-56 group-hover:duration-500  text-gray-50  font-bold md:text-2xl text-lg'>
+                   <div className='md:px-4 md:py-2 px-2 py-1 md:my-5 my-2 md:inline-block hidden md:-bottom-56 bottom-0 absolute group-hover:-translate-y-56 group-hover:duration-500  text-gray-50  font-bold md:text-2xl text-lg'>
                    {productData.imageArray[index].Description}
                    </div>
                 </div>
