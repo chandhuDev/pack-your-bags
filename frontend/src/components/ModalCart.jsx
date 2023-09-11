@@ -54,8 +54,9 @@ return (
                     onChange={e => setValue(e.target.value)}
                     id="inputText"
                   />
+                  <p className='bg-white/95 text-red-600 font-sans p-2 text-center'>While payment use <span className="block">4242 4242 4242 4242 as card number, 139 as cvv and 12/24 as expiry dates</span></p>
                   </div>
-                  <button className={`flex items-center p-4 rounded-lg border-2 transition shadow-lg ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300`}   onClick={handlePayment}>Buy now</button>
+                  <button className={`flex items-center p-4 rounded-lg border-2 transition shadow-lg ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300`}  onClick={handlePayment}>Buy now</button>
                   <div className='absolute top-5 md:right-5 right-2 cursor-pointer hover:scale-150 duration-200 transition ease-linear' onClick={()=>{closeModal(false)}}>
                     <ImCancelCircle className='w-8 h-8 '/>
                   </div>
